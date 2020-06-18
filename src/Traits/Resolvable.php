@@ -16,7 +16,6 @@ trait Resolvable
 
     protected function resolveRules()
     {
-
         if (method_exists($this, 'rules')) {
             $this->validator = Validator::make($this->all(), $this->rules());
             $this->validator->validate();

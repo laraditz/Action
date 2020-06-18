@@ -3,9 +3,9 @@
 namespace Laraditz\Action;
 
 use BadMethodCallException;
+use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
 use Laraditz\Action\Traits\Resolvable;
-use Illuminate\Http\Request;
 
 class Action
 {
@@ -28,8 +28,6 @@ class Action
         if (method_exists($this, 'handle')) {
             return $this->handle();
         }
-
-        return;
     }
 
     public function fill(array $attributes)
