@@ -20,7 +20,7 @@ class Action
         }
     }
 
-    protected function handleRun(array $attributes = [])
+    protected function handleNow(array $attributes = [])
     {
         $this->fill($attributes);
         $this->resolveRules();
@@ -65,13 +65,13 @@ class Action
             $attributes = array_merge($attributes, app(Request::class)->all());
         }
 
-        return $this->run($attributes);
+        return $this->now($attributes);
     }
 
     public function __call($method, $arguments)
     {
-        if ($method === 'run') {
-            return $this->handleRun(...$arguments);
+        if ($method === 'now') {
+            return $this->handleNow(...$arguments);
         }
 
         throw new BadMethodCallException(sprintf(
@@ -83,8 +83,8 @@ class Action
 
     public static function __callStatic($method, $arguments)
     {
-        if ($method === 'run') {
-            return (new static(...$arguments))->handleRun();
+        if ($method === 'now') {
+            return (new static(...$arguments))->handleNow();
         }
 
         return (new static)->$method(...$arguments);
