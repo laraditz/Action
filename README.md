@@ -5,7 +5,7 @@
 [![License](https://poser.pugx.org/laraditz/action/license?format=flat-square)](https://packagist.org/packages/laraditz/action)
 [![StyleCI](https://github.styleci.io/repos/7548986/shield?style=square)](https://github.com/laraditz/action)
 
-Single action class for Laravel and Lumen to keep your application DRY
+Single action class for Laravel and Lumen to keep your application DRY.
 
 ## Installation
 
