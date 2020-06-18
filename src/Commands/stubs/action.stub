@@ -1,0 +1,18 @@
+<?php
+
+namespace DummyNamespace;
+
+use Laraditz\Action\Action;
+
+class DummyClass extends Action
+{
+    public function rules()
+    {
+        // Your rules goes here (Optional)
+    }
+
+    public function handle()
+    {
+        // Your code goes here
+    }
+}
