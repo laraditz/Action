@@ -85,12 +85,12 @@ $createNewPost = new CreateNewPost([
     'body' => 'This is a post content'
 ]);
 
-$createNewPost->now();
+$createNewPost->dispatch();
 ```
 
 **Using static method**
 ```php
-CreateNewPost::now([
+CreateNewPost::dispatch([
     'title' => 'My first post', 
     'body' => 'This is a post content'
 ]);
