@@ -9,6 +9,7 @@ class DummyClass extends Action
     public function rules()
     {
         // Your rules goes here (Optional)
+        return [];
     }
 
     public function handle()

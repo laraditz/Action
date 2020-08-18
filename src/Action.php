@@ -68,7 +68,7 @@ class Action
 
     public function __call($method, $arguments)
     {
-        if ($method === 'now') {
+        if ($method === 'now' || $method === 'dispatch') {
             return $this->handleNow(...$arguments);
         }
 
@@ -81,7 +81,7 @@ class Action
 
     public static function __callStatic($method, $arguments)
     {
-        if ($method === 'now') {
+        if ($method === 'now' || $method === 'dispatch') {
             return (new static(...$arguments))->handleNow();
         }
 
