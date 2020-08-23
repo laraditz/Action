@@ -4,9 +4,9 @@ namespace Laraditz\Action\Traits;
 
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Str;
 use ReflectionMethod;
 use ReflectionParameter;
-use Illuminate\Support\Str;
 
 trait Resolvable
 {
@@ -49,7 +49,7 @@ trait Resolvable
 
     protected function resolveMethodDependency(ReflectionParameter $parameter, $extras = [])
     {
-        list($key, $value) = $this->findAttributeFromParameter($parameter->name, $extras);
+        [$key, $value] = $this->findAttributeFromParameter($parameter->name, $extras);
 
         $class = $parameter->getClass();
 
