@@ -23,6 +23,8 @@ class ActionServiceProvider extends ServiceProvider
                 __NAMESPACE__ . '\Commands\ActionMakeCommand',
             ]);
         }
+
+        $this->app->make(__NAMESPACE__ . '\Action');
     }
 
     /**

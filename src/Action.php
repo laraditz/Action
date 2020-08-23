@@ -26,7 +26,7 @@ class Action
         $this->resolveRules();
 
         if (method_exists($this, 'handle')) {
-            return $this->handle();
+            return $this->resolveMethod($this, 'handle');
         }
     }
 
