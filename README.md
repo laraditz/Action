@@ -74,6 +74,16 @@ class CreateNewPost extends Action
     }
 }
 ```
+
+You can also use dependency injection (DI) on the handle method.
+```php
+...
+public function handle(Request $request)
+{
+    // Your logic goes here        
+}
+...
+```
 > You can totally remove the `rules` method if you are not using it or just leave it as is.
 
 Now that you've created your action, you can call it in few ways as below:
